@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Career Paths - LearnGen.ai</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .bg-light { background-color: #f9fafb; }
+        .hero-gradient { background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+        }
+        .path-card {
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .path-card:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <i class="fas fa-brain text-2xl text-indigo-600 mr-2"></i>
+                        <span class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                            LearnGen.ai
+                        </span>
+                    </a>
+                </div>
+                <ul class="hidden md:flex space-x-6">
+                    <li>
+                        <a href="index.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-home mr-2"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Features.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-star mr-2"></i> Features
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Pricing.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-tag mr-2"></i> Pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-sign-in-alt mr-2"></i> Login
+                        </a>
+                    </li>
+                </ul>
+                <div class="md:hidden">
+                    <button id="mobileMenuButton" class="text-gray-700 hover:text-indigo-600 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg pb-2">
+            <a href="index.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-home mr-3 w-5 text-center"></i> Home
+            </a>
+            <a href="Features.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-star mr-3 w-5 text-center"></i> Features
+            </a>
+            <a href="Pricing.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-tag mr-3 w-5 text-center"></i> Pricing
+            </a>
+            <a href="login.html" class="block text-indigo-600 hover:text-indigo-700 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-sign-in-alt mr-3 w-5 text-center"></i> Login
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+                    Discover Your Personalized Career Path
+                </h1>
+                <p class="text-lg md:text-xl mb-8">
+                    Explore AI-powered learning journeys from 6th grade to college and beyond.
+                </p>
+                <a href="signup.html" class="bg-white text-indigo-600 hover:bg-gray-100 px-6 py-3 rounded-md text-lg font-medium transition-colors">
+                    Get Started for Free
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Pathways Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-center mb-12">Career Paths for Every Stage</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Middle School Path -->
+                <div class="path-card p-6 bg-gray-50 rounded-lg shadow hover:shadow-lg">
+                    <i class="fas fa-child text-indigo-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">6th-8th Grade: Foundation Builder</h3>
+                    <ul class="list-disc ml-5 mb-4 text-gray-700">
+                        <li><span class="font-semibold">Math:</span> Arithmetic, Pre-Algebra, Geometry basics</li>
+                        <li><span class="font-semibold">Science:</span> Life Science, Earth Science, Introduction to Physics & Chemistry</li>
+                        <li><span class="font-semibold">English:</span> Reading Comprehension, Writing, Grammar</li>
+                        <li><span class="font-semibold">Social Studies:</span> World History, Geography, Civics</li>
+                        <li><span class="font-semibold">Technology:</span> Computer Basics, Intro to Coding (Scratch, Python)</li>
+                        <li><span class="font-semibold">Arts & Electives:</span> Art, Music, Sports, Clubs</li>
+                        <li><span class="font-semibold">Skills:</span> Critical Thinking, Problem Solving, Teamwork</li>
+                    </ul>
+                    <span class="inline-block bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">Start Early</span>
+                </div>
+                <!-- High School Path -->
+                <div class="path-card p-6 bg-gray-50 rounded-lg shadow hover:shadow-lg">
+                    <i class="fas fa-user-graduate text-indigo-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">9th-12th Grade: Skill Explorer</h3>
+                    <ul class="list-disc ml-5 mb-4 text-gray-700">
+                        <li><span class="font-semibold">Math:</span> Algebra I & II, Geometry, Pre-Calculus, Calculus, Statistics</li>
+                        <li><span class="font-semibold">Science:</span> Biology, Chemistry, Physics, Environmental Science</li>
+                        <li><span class="font-semibold">English:</span> Literature, Advanced Writing, Public Speaking</li>
+                        <li><span class="font-semibold">Social Studies:</span> US History, Government, Economics, Psychology</li>
+                        <li><span class="font-semibold">Technology:</span> Computer Science, Web Development, Robotics</li>
+                        <li><span class="font-semibold">Electives:</span> Foreign Languages, Art, Music, Business, Health</li>
+                        <li><span class="font-semibold">Career Prep:</span> Internships, Volunteering, SAT/ACT, AP/IB Courses</li>
+                        <li><span class="font-semibold">Skills:</span> Leadership, Time Management, Collaboration</li>
+                    </ul>
+                    <span class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">Shape Your Future</span>
+                </div>
+                <!-- College Path -->
+                <div class="path-card p-6 bg-gray-50 rounded-lg shadow hover:shadow-lg">
+                    <i class="fas fa-university text-indigo-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">College Level: Career Launcher</h3>
+                    <ul class="list-disc ml-5 mb-4 text-gray-700">
+                        <li><span class="font-semibold">Majors:</span> Engineering, Business, Computer Science, Medicine, Arts, Social Sciences, and more</li>
+                        <li><span class="font-semibold">Core Courses:</span> Advanced Math, Science, Humanities, Research Methods</li>
+                        <li><span class="font-semibold">Specializations:</span> Choose a concentration or minor to deepen expertise</li>
+                        <li><span class="font-semibold">Professional Skills:</span> Communication, Project Management, Critical Analysis</li>
+                        <li><span class="font-semibold">Experience:</span> Internships, Research Projects, Study Abroad, Leadership Roles</li>
+                        <li><span class="font-semibold">Certifications:</span> Industry Certificates, Online Courses, Workshops</li>
+                        <li><span class="font-semibold">Career Prep:</span> Resume Building, Interview Skills, Networking, Job Placement</li>
+                    </ul>
+                    <span class="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Launch Your Career</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-center mb-12">Why Choose LearnGen?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <i class="fas fa-lightbulb text-indigo-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Personalized Learning Paths</h3>
+                    <p>AI-driven recommendations tailored to your learning style and goals.</p>
+                </div>
+                <div class="feature-card p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <i class="fas fa-chart-line text-indigo-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Progress Tracking</h3>
+                    <p>Monitor your learning journey with detailed analytics and insights.</p>
+                </div>
+                <div class="feature-card p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <i class="fas fa-users text-indigo-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Community Support</h3>
+                    <p>Join a vibrant community of learners and share your experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/Js/auth.js"></script>
+    <script src="/Js/main.js"></script>
+</body>
+</html>

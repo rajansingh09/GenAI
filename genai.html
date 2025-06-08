@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnGen.ai - AI Chat Assistant</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 600: '#4f46e5', 700: '#4338ca' },
+                        secondary: { 600: '#7c3aed', 700: '#6d28d9' }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Marked.js for markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        #chat-container::-webkit-scrollbar { width: 6px; }
+        #chat-container::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        #chat-container::-webkit-scrollbar-thumb { background: #c7d2fe; border-radius: 10px; }
+        #chat-container::-webkit-scrollbar-thumb:hover { background: #a5b4fc; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .message-animation { animation: fadeIn 0.3s ease-out forwards; }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 { font-weight: bold; margin-top: 1em; margin-bottom: 0.5em; }
+        .markdown-content p { margin-bottom: 1em; }
+        .markdown-content ul, .markdown-content ol { margin-left: 1.5em; margin-bottom: 1em; }
+        .markdown-content li { margin-bottom: 0.5em; }
+        .markdown-content code { background-color: #f3f4f6; padding: 0.2em 0.4em; border-radius: 0.25em; font-family: monospace; }
+        .markdown-content pre { background-color: #f3f4f6; padding: 1em; border-radius: 0.5em; overflow-x: auto; margin-bottom: 1em; }
+        .markdown-content a { color: #4f46e5; text-decoration: underline; }
+        html, body { height: 100%; margin: 0; padding: 0; }
+        #app { display: flex; flex-direction: column; height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="flex-1 flex flex-col h-full">
+            <!-- Chat Header with gradient -->
+            <div class="bg-gradient-to-r from-primary-600 to-secondary-600 p-4 text-white">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div>
+                        <a href="index.html" class="font-bold text-lg">LeanGenAI</a>
+                        <p class="text-xs opacity-80">LearnGen-powered study assistant</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Chat Messages -->
+            <div id="chat-container" class="flex-1 overflow-y-auto p-6 space-y-4 bg-gray-50">
+                <!-- AI Welcome Message -->
+                <div class="flex items-start space-x-3 message-animation">
+                    <div class="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm max-w-3xl border border-gray-100 markdown-content">
+                        <p class="font-bold text-primary-600 mb-2">StudyBot</p>
+                        <div class="prose">
+                            <p>Hello! I'm your AI-powered study assistant. Select your class and subject, then ask anything. I'll answer in a way that's just right for your level!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Input Area -->
+            <div class="border-t p-4 bg-white">
+                <form id="chat-form" class="flex flex-col gap-2">
+                    <div class="flex items-end gap-3">
+                        <div class="flex-1 relative">
+                            <textarea id="user-input" rows="1" placeholder="Ask your question..." 
+                                class="w-full p-3 pr-12 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none" 
+                                style="min-height: 50px; max-height: 150px;"></textarea>
+                            <div class="absolute right-3 bottom-3 flex items-center space-x-2">
+                                <button id="send-btn" type="submit" class="w-8 h-8 bg-gradient-to-r from-primary-600 to-secondary-600 text-white rounded-lg flex items-center justify-center hover:shadow-md transition-all">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-xs text-gray-500 flex items-center">
+                        <i class="fas fa-info-circle mr-1"></i> AI adapts to your grade and subject for the best help!
+                    </div>
+                </form>
+                <input type="file" id="file-input" accept="image/*, .pdf" class="hidden">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

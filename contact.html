@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - LearnGen.ai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        },
+                        secondary: {
+                            600: '#7c3aed',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center group">
+                        <i class="fas fa-brain text-2xl text-primary-600 mr-2 group-hover:text-secondary-600 transition-colors"></i>
+                        <span class="text-xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                            LearnGen.ai
+                        </span>
+                    </a>
+                </div>
+    
+                <ul class="hidden md:flex space-x-6">
+                    <li>
+                        <a href="index.html" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-home mr-2"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Features.html" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-star mr-2"></i> Features
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Pricing.html" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-tag mr-2"></i> Pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="text-white bg-primary-600 hover:bg-primary-700 px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors shadow-sm hover:shadow-md">
+                            <i class="fas fa-sign-in-alt mr-2"></i> Login
+                        </a>
+                    </li>
+                </ul>
+    
+                <div class="md:hidden">
+                    <button id="mobileMenuButton" class="text-gray-700 hover:text-primary-600 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg pb-2">
+            <a href="index.html" class="block text-gray-700 hover:text-primary-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-home mr-3 w-5 text-center"></i> Home
+            </a>
+            <a href="Features.html" class="block text-gray-700 hover:text-primary-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-star mr-3 w-5 text-center"></i> Features
+            </a>
+            <a href="Pricing.html" class="block text-gray-700 hover:text-primary-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-tag mr-3 w-5 text-center"></i> Pricing
+            </a>
+            <a href="login.html" class="block text-primary-600 hover:text-primary-700 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-sign-in-alt mr-3 w-5 text-center"></i> Login
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4yIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00eiIvPjwvZz48L2c+PC9zdmc+')]"></div>
+        </div>
+        <div class="max-w-4xl mx-auto text-center relative px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+            <p class="text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed">
+                We're here to help! Reach out with questions, feedback, or partnership inquiries.
+            </p>
+        </div>
+    </header>
+
+    <!-- Contact Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Contact Information -->
+            <div class="lg:w-1/3 space-y-8">
+                <!-- Contact Card -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-envelope text-primary-600 mr-3"></i> Contact Information
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary-100 rounded-full p-3">
+                                <i class="fas fa-envelope text-primary-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Email Us</h3>
+                                <p class="text-gray-600 mt-1">support@learngenie.ai</p>
+                                <p class="text-gray-600">partners@learngenie.ai</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary-100 rounded-full p-3">
+                                <i class="fas fa-phone-alt text-primary-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Call Us</h3>
+                                <p class="text-gray-600 mt-1">+1 (555) 123-4567</p>
+                                <p class="text-gray-600">Mon-Fri, 9am-5pm EST</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary-100 rounded-full p-3">
+                                <i class="fas fa-map-marker-alt text-primary-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Visit Us</h3>
+                                <p class="text-gray-600 mt-1">123 Learning Street</p>
+                                <p class="text-gray-600">EduCity, EC 12345</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support Resources -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-life-ring text-primary-600 mr-3"></i> Support Resources
+                    </h2>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="faq.html" class="flex items-center text-gray-700 hover:text-primary-600 transition-colors">
+                                <i class="fas fa-question-circle text-primary-600 mr-3"></i>
+                                <span>Frequently Asked Questions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="flex items-center text-gray-700 hover:text-primary-600 transition-colors">
+                                <i class="fas fa-newspaper text-primary-600 mr-3"></i>
+                                <span>Help Center Articles</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Pricing.html" class="flex items-center text-gray-700 hover:text-primary-600 transition-colors">
+                                <i class="fas fa-tag text-primary-600 mr-3"></i>
+                                <span>Pricing Information</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-gray-700 hover:text-primary-600 transition-colors">
+                                <i class="fas fa-file-alt text-primary-600 mr-3"></i>
+                                <span>Documentation</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="lg:w-2/3">
+                <div class="bg-white p-8 sm:p-10 rounded-xl shadow-sm">
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Send Us a Message</h2>
+                    <p class="text-lg text-gray-600 mb-8">Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- First Name -->
+                            <div>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700">First Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="first-name" name="first-name" required 
+                                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 py-3 px-4 border">
+                            </div>
+                            
+                            <!-- Last Name -->
+                            <div>
+                                <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="last-name" name="last-name" required 
+                                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 py-3 px-4 border">
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email <span class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" required 
+                                class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 py-3 px-4 border" 
+                                placeholder="your@email.com">
+                        </div>
+                        
+                        <!-- Subject -->
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700">Subject <span class="text-red-500">*</span></label>
+                            <select id="subject" name="subject" required 
+                                class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 py-3 px-4 border">
+                                <option value="">Select a subject</option>
+                                <option value="support">Support Request</option>
+                                <option value="sales">Sales Inquiry</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="feedback">Product Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Message -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Your Message <span class="text-red-500">*</span></label>
+                            <textarea id="message" name="message" rows="5" required 
+                                class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 py-3 px-4 border" 
+                                placeholder="How can we help you?"></textarea>
+                        </div>
+                        
+                        <!-- File Attachment -->
+                        <div>
+                            <label for="file-upload" class="block text-sm font-medium text-gray-700">Attachment (Optional)</label>
+                            <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                                <div class="space-y-1 text-center">
+                                    <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                        <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <div class="flex text-sm text-gray-600">
+                                        <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-primary-600 hover:text-primary-500 focus-within:outline-none">
+                                            <span>Upload a file</span>
+                                            <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                        </label>
+                                        <p class="pl-1">or drag and drop</p>
+                                    </div>
+                                    <p class="text-xs text-gray-500">
+                                        PNG, JPG, PDF up to 10MB
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="text-center">
+                            <button type="submit" class="w-full md:w-auto bg-primary-600 text-white font-medium py-3 px-8 rounded-md shadow hover:bg-primary-700 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <div class="flex items-center">
+                            <a href="index.html" class="flex items-center">
+                                <i class="fas fa-brain text-2xl text-indigo-600 mr-2"></i>
+                                <span class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                                    LearnGen.ai
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-300">
+                        <i class="fas fa-graduation-cap mr-2"></i> Revolutionizing education with AI-powered tools.
+                    </p>
+                    <div class="mt-4 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-link mr-2"></i> Quick Links
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="Features.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Features</a></li>
+                        <li><a href="Pricing.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Pricing</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i> Other Links
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="faq.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> FAQs</a></li>
+                        <li><a href="Careers.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Careers</a></li>
+                        <li><a href="About Us.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> About Us</a></li>
+                        <li><a href="Privacy Policy.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> Contact Us
+                    </h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> support@learngenie.ai
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i> +1 234 567 890
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> 123 Learning St, EduCity
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2023 LearnGen.ai. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="terms.html" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="Privacy Policy.html" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically handle form submission via AJAX
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+    <script src="/Js/main.js"></script>
+</body>
+</html>

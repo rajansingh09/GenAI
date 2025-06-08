@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - LearnGen.ai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .tos-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .tos-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .highlight-box {
+            background-color: rgba(79, 70, 229, 0.05);
+            border-left: 4px solid #4F46E5;
+        }
+        .nav-link.active {
+            color: #4F46E5;
+            font-weight: 600;
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 80px;
+            align-self: start;
+        }
+        .content-section {
+            scroll-margin-top: 100px;
+        }
+        .hero-pattern {
+            background-image: radial-gradient(circle at 25% 50%, rgba(79, 70, 229, 0.1) 0%, transparent 50%);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        },
+                        secondary: {
+                            600: '#7c3aed',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center group">
+                        <i class="fas fa-brain text-2xl text-indigo-600 mr-2 group-hover:text-emerald-500 transition-colors"></i>
+                        <span class="text-xl font-bold gradient-text">
+                            LearnGen.ai
+                        </span>
+                    </a>
+                </div>
+    
+                <ul class="hidden md:flex space-x-6">
+                    <li>
+                        <a href="index.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-home mr-2"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Features.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-star mr-2"></i> Features
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Pricing.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-tag mr-2"></i> Pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors shadow-sm hover:shadow-md">
+                            <i class="fas fa-sign-in-alt mr-2"></i> Login
+                        </a>
+                    </li>
+                </ul>
+    
+                <div class="md:hidden">
+                    <button id="mobileMenuButton" class="text-gray-700 hover:text-indigo-600 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg pb-2">
+            <a href="index.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-home mr-3 w-5 text-center"></i> Home
+            </a>
+            <a href="Features.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-star mr-3 w-5 text-center"></i> Features
+            </a>
+            <a href="Pricing.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-tag mr-3 w-5 text-center"></i> Pricing
+            </a>
+            <a href="login.html" class="block text-indigo-600 hover:text-indigo-700 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-sign-in-alt mr-3 w-5 text-center"></i> Login
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+     <header class="relative bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4yIj48cGF0aCBkPSJNMzYgMzRjMC0xLjEuOS0yIDItMmgxNmMxLjEgMCAyIC45IDIgMnYxNmMwIDEuMS0uOSAyLTIgMkgzOGMtMS4xIDAtMi0uOS0yLTJWMzR6TTIgMzRjMC0xLjEuOS0yIDItMmgxNmMxLjEgMCAyIC45IDIgMnYxNmMwIDEuMS0uOSAyLTIgMkg0Yy0xLjEgMC0yLS45LTItMlYzNHpNMzYgMmMwLTEuMS45LTIgMi0yaDE2YzEuMSAwIDIgLjkgMiAydjE2YzAgMS4xLS45IDItMiAySDM4Yy0xLjEgMC0yLS45LTItMlYyek0yIDJjMC0xLjEuOS0yIDItMmgxNmMxLjEgMCAyIC45IDIgMnYxNmMwIDEuMS0uOSAyLTIgMkg0Yy0xLjEgMC0yLS45LTItMlYyeiIvPjwvZz48L2c+PC9zdmc+')]"></div>
+        </div>
+        <div class="max-w-4xl mx-auto text-center relative px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Terms of Service</h1>
+            <p class="text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                The legal agreement between you and LearnGen.ai
+            </p>
+        </div>
+    </header>
+
+    <!-- Last Updated Notice -->
+    
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar Navigation -->
+            <div class="lg:w-1/4">
+                <div class="sticky-nav bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center text-indigo-600">
+                        <i class="fas fa-bookmark mr-2"></i> Quick Navigation
+                    </h3>
+                    <nav class="space-y-2">
+                        <a href="#introduction" class="block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors nav-link">
+                            <i class="fas fa-info-circle text-xs mr-3 text-indigo-600 w-4 text-center"></i> Introduction
+                        </a>
+                        <a href="#accounts" class="block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors nav-link">
+                            <i class="fas fa-user text-xs mr-3 text-indigo-600 w-4 text-center"></i> Accounts
+                        </a>
+                        <a href="#content" class="block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors nav-link">
+                            <i class="fas fa-file-alt text-xs mr-3 text-indigo-600 w-4 text-center"></i> Content
+                        </a>
+                        <a href="#payments" class="block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors nav-link">
+                            <i class="fas fa-credit-card text-xs mr-3 text-indigo-600 w-4 text-center"></i> Payments
+                        </a>
+                        <a href="#termination" class="block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors nav-link">
+                            <i class="fas fa-ban text-xs mr-3 text-indigo-600 w-4 text-center"></i> Termination
+                        </a>
+                        <a href="#disclaimer" class="block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors nav-link">
+                            <i class="fas fa-exclamation-triangle text-xs mr-3 text-indigo-600 w-4 text-center"></i> Disclaimer
+                        </a>
+                        <a href="#changes" class="block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors nav-link">
+                            <i class="fas fa-sync-alt text-xs mr-3 text-indigo-600 w-4 text-center"></i> Changes
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Terms Content -->
+            <div class="lg:w-3/4">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                            <span class="block">LearnGen.ai</span>
+                            <span class="block gradient-text">Terms of Service</span>
+                        </h2>
+                        <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                            Please read these Terms of Service carefully before using our platform.
+                        </p>
+                    </div>
+
+                    <div class="space-y-8">
+                        <!-- Introduction -->
+                        <div id="introduction" class="tos-card content-section bg-white p-6 rounded-lg border border-gray-100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600 mt-1 mr-4">
+                                    <i class="fas fa-info-circle text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        By accessing or using the LearnGen.ai website, application, or services (collectively, the "Service"), you agree to be bound by these Terms of Service ("Terms"). These Terms apply to all visitors, users, and others who access the Service.
+                                    </p>
+                                    <div class="highlight-box p-4 rounded-lg mb-4">
+                                        <p class="text-sm text-gray-700">
+                                            <i class="fas fa-exclamation-circle text-indigo-600 mr-2"></i> If you do not agree to these Terms, you may not use our Service.
+                                        </p>
+                                    </div>
+                                    <p class="text-gray-600">
+                                        Our Service provides AI-powered learning tools and resources. We may update or modify the Service at any time without prior notice.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accounts -->
+                        <div id="accounts" class="tos-card content-section bg-white p-6 rounded-lg border border-gray-100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600 mt-1 mr-4">
+                                    <i class="fas fa-user text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">2. Accounts</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        When you create an account with us, you must provide accurate and complete information. You are responsible for:
+                                    </p>
+                                    <ul class="list-disc pl-6 space-y-3 text-gray-600 mb-4">
+                                        <li>Maintaining the confidentiality of your account credentials</li>
+                                        <li>All activities that occur under your account</li>
+                                        <li>Immediately notifying us of any unauthorized use of your account</li>
+                                    </ul>
+                                    <p class="text-gray-600">
+                                        We reserve the right to refuse service, terminate accounts, or remove content at our sole discretion.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div id="content" class="tos-card content-section bg-white p-6 rounded-lg border border-gray-100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600 mt-1 mr-4">
+                                    <i class="fas fa-file-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Content</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        Our Service allows you to post, link, store, share and otherwise make available certain information, text, or other material ("Content"). You are responsible for the Content you post on or through the Service.
+                                    </p>
+                                    <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100 mb-4">
+                                        <h4 class="font-semibold text-indigo-800 mb-2 flex items-center">
+                                            <i class="fas fa-ban mr-2"></i> Prohibited Content
+                                        </h4>
+                                        <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                                            <li>Content that violates any law or regulation</li>
+                                            <li>Spam, machine-generated content, or automated queries</li>
+                                            <li>Viruses or malicious code</li>
+                                            <li>Content that infringes on intellectual property rights</li>
+                                        </ul>
+                                    </div>
+                                    <p class="text-gray-600">
+                                        We may monitor and review Content on the Service, but are not obligated to do so.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payments -->
+                        <div id="payments" class="tos-card content-section bg-white p-6 rounded-lg border border-gray-100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600 mt-1 mr-4">
+                                    <i class="fas fa-credit-card text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">4. Payments & Subscriptions</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        For paid services, you agree to pay all fees as described in the Service. We may change fees at any time with notice.
+                                    </p>
+                                    <ul class="list-disc pl-6 space-y-3 text-gray-600 mb-4">
+                                        <li><strong>Billing:</strong> You must provide accurate billing information</li>
+                                        <li><strong>Renewals:</strong> Subscriptions automatically renew unless canceled</li>
+                                        <li><strong>Refunds:</strong> We may offer refunds at our discretion</li>
+                                        <li><strong>Taxes:</strong> You're responsible for all applicable taxes</li>
+                                    </ul>
+                                    <div class="highlight-box p-4 rounded-lg">
+                                        <p class="text-sm text-gray-700">
+                                            <i class="fas fa-info-circle text-indigo-600 mr-2"></i> You can cancel your subscription at any time, but we don't provide refunds for partial months.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Termination -->
+                        <div id="termination" class="tos-card content-section bg-white p-6 rounded-lg border border-gray-100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600 mt-1 mr-4">
+                                    <i class="fas fa-ban text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">5. Termination</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        We may terminate or suspend your account immediately, without prior notice or liability, for any reason, including if you breach these Terms.
+                                    </p>
+                                    <p class="text-gray-600">
+                                        Upon termination, your right to use the Service will immediately cease. All provisions of these Terms which should survive termination shall survive.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Disclaimer -->
+                        <div id="disclaimer" class="tos-card content-section bg-white p-6 rounded-lg border border-gray-100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600 mt-1 mr-4">
+                                    <i class="fas fa-exclamation-triangle text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">6. Disclaimer of Warranties</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        The Service is provided "AS IS" and "AS AVAILABLE" without warranties of any kind, either express or implied, including:
+                                    </p>
+                                    <ul class="list-disc pl-6 space-y-3 text-gray-600 mb-4">
+                                        <li>We don't warrant the Service will be uninterrupted or error-free</li>
+                                        <li>We don't warrant the results from using the Service will be accurate or reliable</li>
+                                        <li>We don't warrant the quality of any products, services, or information obtained through the Service</li>
+                                    </ul>
+                                    <div class="highlight-box p-4 rounded-lg">
+                                        <p class="text-sm text-gray-700">
+                                            <i class="fas fa-shield-alt text-indigo-600 mr-2"></i> Some jurisdictions don't allow exclusion of implied warranties, so these limitations may not apply to you.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Changes -->
+                        <div id="changes" class="tos-card content-section bg-white p-6 rounded-lg border border-gray-100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600 mt-1 mr-4">
+                                    <i class="fas fa-sync-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">7. Changes to Terms</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        We reserve the right to modify these Terms at any time. We'll notify you of changes through the Service or by email.
+                                    </p>
+                                    <p class="text-gray-600">
+                                        By continuing to access or use the Service after revisions become effective, you agree to be bound by the revised Terms. If you don't agree to the new Terms, please stop using the Service.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Governing Law -->
+                        <div class="tos-card bg-white p-6 rounded-lg border border-gray-100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600 mt-1 mr-4">
+                                    <i class="fas fa-balance-scale text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">8. Governing Law</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law provisions.
+                                    </p>
+                                    <p class="text-gray-600">
+                                        Any disputes arising under these Terms will be resolved in the state or federal courts located in Delaware.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact CTA -->
+    <section class="py-16 bg-indigo-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-indigo-100">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Questions About Our Terms?</h3>
+                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+                    Our team is available to help clarify any aspect of our Terms of Service.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition shadow-md">
+                        <i class="fas fa-envelope mr-2"></i> Contact Us
+                    </a>
+                    <a href="faq.html" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition">
+                        <i class="fas fa-question-circle mr-2"></i> Visit FAQs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <a href="index.html" class="flex items-center group">
+                            <i class="fas fa-brain text-2xl text-indigo-400 mr-2 group-hover:text-emerald-400 transition-colors"></i>
+                            <span class="text-xl font-bold gradient-text">
+                                LearnGen.ai
+                            </span>
+                        </a>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        <i class="fas fa-graduation-cap mr-2"></i> Revolutionizing education with AI-powered tools.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <span class="sr-only">Facebook</span>
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <span class="sr-only">Twitter</span>
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <span class="sr-only">Instagram</span>
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <span class="sr-only">LinkedIn</span>
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-link mr-2"></i> Quick Links
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="Features.html" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Features</a></li>
+                        <li><a href="Pricing.html" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Pricing</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i> Resources
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="faq.html" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> FAQs</a></li>
+                        <li><a href="Careers.html" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Careers</a></li>
+                        <li><a href="About Us.html" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> About Us</a></li>
+                        <li><a href="terms.html" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> Contact Us
+                    </h3>
+                    <address class="not-italic text-gray-300 space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2"></i>
+                            <span>support@learngenie.ai</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2"></i>
+                            <span>+1 234 567 890</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span>123 Learning St, EduCity</span>
+                        </div>
+                    </address>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2023 LearnGen.ai. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="terms.html" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                    <a href="privacy.html" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuButton').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling and active link highlighting
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                // Scroll to section
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Highlight active section based on scroll position
+        const sections = document.querySelectorAll('.content-section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <script src="/Js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Resources - LearnGen.ai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        },
+                        secondary: {
+                            600: '#7c3aed',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center group">
+                        <i class="fas fa-brain text-2xl text-primary-600 mr-2 group-hover:text-secondary-600 transition-colors"></i>
+                        <span class="text-xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                            LearnGen.ai
+                        </span>
+                    </a>
+                </div>
+    
+                <ul class="hidden md:flex space-x-6">
+                    <li>
+                        <a href="index.html" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-home mr-2"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Features.html" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-star mr-2"></i> Features
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Pricing.html" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-tag mr-2"></i> Pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="text-white bg-primary-600 hover:bg-primary-700 px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors shadow-sm hover:shadow-md">
+                            <i class="fas fa-sign-in-alt mr-2"></i> Login
+                        </a>
+                    </li>
+                </ul>
+    
+                <div class="md:hidden">
+                    <button id="mobileMenuButton" class="text-gray-700 hover:text-primary-600 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg pb-2">
+            <a href="index.html" class="block text-gray-700 hover:text-primary-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-home mr-3 w-5 text-center"></i> Home
+            </a>
+            <a href="Features.html" class="block text-gray-700 hover:text-primary-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-star mr-3 w-5 text-center"></i> Features
+            </a>
+            <a href="Pricing.html" class="block text-gray-700 hover:text-primary-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-tag mr-3 w-5 text-center"></i> Pricing
+            </a>
+            <a href="login.html" class="block text-primary-600 hover:text-primary-700 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-sign-in-alt mr-3 w-5 text-center"></i> Login
+            </a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="relative bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4yIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00eiIvPjwvZz48L2c+PC9zdmc+')]"></div>
+        </div>
+        <div class="max-w-4xl mx-auto text-center relative px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Blog & Resources</h1>
+            <p class="text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed">
+                Discover expert insights, practical guides, and the latest trends in AI-powered education.
+            </p>
+            <div class="mt-8">
+                <div class="relative max-w-md mx-auto">
+                    <input type="text" placeholder="Search articles..." class="w-full px-6 py-3 rounded-full border-0 focus:ring-2 focus:ring-primary-500 shadow-md">
+                    <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary-600 text-white p-2 rounded-full hover:bg-primary-700 transition-colors">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Blog Posts Section -->
+            <div class="lg:w-2/3">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-3xl font-extrabold text-gray-900">Latest Articles</h2>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-gray-600">Sort by:</span>
+                        <select class="border-gray-300 rounded-md shadow-sm focus:border-primary-500 focus:ring-primary-500 text-sm">
+                            <option>Newest First</option>
+                            <option>Most Popular</option>
+                            <option>Trending</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Featured Post -->
+                    <article class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                        <div class="md:flex">
+                            <div class="md:flex-shrink-0 md:w-1/3">
+                                <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Featured post">
+                            </div>
+                            <div class="p-8 md:w-2/3">
+                                <div class="flex items-center text-sm mb-2">
+                                    <span class="bg-primary-100 text-primary-800 text-xs font-semibold px-2.5 py-0.5 rounded">Featured</span>
+                                    <span class="text-gray-500 ml-3">June 12, 2023</span>
+                                    <span class="text-gray-500 ml-3">12 min read</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">The Future of AI in Education: What to Expect in 2024</h3>
+                                <p class="text-gray-600 mb-4">Explore the groundbreaking AI technologies that are set to transform classrooms, personalize learning experiences, and revolutionize educational assessment in the coming year.</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center">
+                                        <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Author">
+                                        <div class="ml-3">
+                                            <p class="text-sm font-medium text-gray-900">Dr. Sarah Johnson</p>
+                                            <p class="text-sm text-gray-500">AI Education Specialist</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-800">
+                                        Read more <i class="fas fa-arrow-right ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Regular Posts -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Post 1 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                            <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Post 1">
+                            <div class="p-6">
+                                <div class="flex items-center text-sm mb-3">
+                                    <span class="text-primary-600 font-semibold">Tutorial</span>
+                                    <span class="text-gray-500 ml-3">May 28, 2023</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">5 Ways to Implement AI in Your Classroom Today</h3>
+                                <p class="text-gray-600 mb-4">Practical strategies for educators to integrate AI tools into their teaching practice without needing technical expertise.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-gray-500">8 min read</span>
+                                    <a href="#" class="text-primary-600 hover:text-primary-800 text-sm font-medium">
+                                        Read more <i class="fas fa-arrow-right ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Post 2 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                            <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Post 2">
+                            <div class="p-6">
+                                <div class="flex items-center text-sm mb-3">
+                                    <span class="text-secondary-600 font-semibold">Case Study</span>
+                                    <span class="text-gray-500 ml-3">May 15, 2023</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">How Lincoln High Improved Test Scores by 27% Using AI</h3>
+                                <p class="text-gray-600 mb-4">A deep dive into how one school district leveraged personalized learning algorithms to achieve remarkable academic gains.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-gray-500">10 min read</span>
+                                    <a href="#" class="text-primary-600 hover:text-primary-800 text-sm font-medium">
+                                        Read more <i class="fas fa-arrow-right ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Post 3 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                            <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Post 3">
+                            <div class="p-6">
+                                <div class="flex items-center text-sm mb-3">
+                                    <span class="text-green-600 font-semibold">Research</span>
+                                    <span class="text-gray-500 ml-3">April 30, 2023</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">The Psychology Behind AI-Powered Learning</h3>
+                                <p class="text-gray-600 mb-4">Understanding how cognitive science principles inform the development of effective educational AI systems.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-gray-500">15 min read</span>
+                                    <a href="#" class="text-primary-600 hover:text-primary-800 text-sm font-medium">
+                                        Read more <i class="fas fa-arrow-right ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Post 4 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                            <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Post 4">
+                            <div class="p-6">
+                                <div class="flex items-center text-sm mb-3">
+                                    <span class="text-purple-600 font-semibold">Opinion</span>
+                                    <span class="text-gray-500 ml-3">April 18, 2023</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Ethical Considerations in Educational AI</h3>
+                                <p class="text-gray-600 mb-4">Examining the moral implications of AI in education and how to implement these technologies responsibly.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-gray-500">12 min read</span>
+                                    <a href="#" class="text-primary-600 hover:text-primary-800 text-sm font-medium">
+                                        Read more <i class="fas fa-arrow-right ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="mt-12 flex justify-center">
+                    <nav class="flex items-center space-x-2">
+                        <a href="#" class="px-3 py-1 rounded-md bg-primary-600 text-white">
+                            1
+                        </a>
+                        <a href="#" class="px-3 py-1 rounded-md text-gray-700 hover:bg-gray-100">
+                            2
+                        </a>
+                        <a href="#" class="px-3 py-1 rounded-md text-gray-700 hover:bg-gray-100">
+                            3
+                        </a>
+                        <a href="#" class="px-3 py-1 rounded-md text-gray-700 hover:bg-gray-100">
+                            Next <i class="fas fa-chevron-right ml-1"></i>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:w-1/3 space-y-8">
+                <!-- Categories -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-folder-open text-primary-600 mr-2"></i> Categories
+                    </h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="flex items-center justify-between text-gray-700 hover:text-primary-600 transition-colors">
+                                <span>All Articles <span class="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-0.5 rounded ml-2">48</span></span>
+                                <i class="fas fa-chevron-right text-xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center justify-between text-gray-700 hover:text-primary-600 transition-colors">
+                                <span>Tutorials <span class="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-0.5 rounded ml-2">15</span></span>
+                                <i class="fas fa-chevron-right text-xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center justify-between text-gray-700 hover:text-primary-600 transition-colors">
+                                <span>Case Studies <span class="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-0.5 rounded ml-2">8</span></span>
+                                <i class="fas fa-chevron-right text-xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center justify-between text-gray-700 hover:text-primary-600 transition-colors">
+                                <span>Research <span class="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-0.5 rounded ml-2">12</span></span>
+                                <i class="fas fa-chevron-right text-xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center justify-between text-gray-700 hover:text-primary-600 transition-colors">
+                                <span>Opinion <span class="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-0.5 rounded ml-2">7</span></span>
+                                <i class="fas fa-chevron-right text-xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center justify-between text-gray-700 hover:text-primary-600 transition-colors">
+                                <span>News <span class="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-0.5 rounded ml-2">6</span></span>
+                                <i class="fas fa-chevron-right text-xs"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Popular Posts -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-fire text-primary-600 mr-2"></i> Popular Posts
+                    </h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="group">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-16 w-16 rounded-md overflow-hidden">
+                                        <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Popular post">
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-sm font-medium text-gray-900 group-hover:text-primary-600">10 AI Tools Every Educator Should Know</p>
+                                        <p class="text-xs text-gray-500">May 5, 2023</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="group">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-16 w-16 rounded-md overflow-hidden">
+                                        <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Popular post">
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-sm font-medium text-gray-900 group-hover:text-primary-600">Personalized Learning: Myth vs Reality</p>
+                                        <p class="text-xs text-gray-500">April 22, 2023</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="group">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-16 w-16 rounded-md overflow-hidden">
+                                        <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Popular post">
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-sm font-medium text-gray-900 group-hover:text-primary-600">How AI is Changing Special Education</p>
+                                        <p class="text-xs text-gray-500">April 10, 2023</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="bg-gradient-to-r from-primary-500 to-secondary-500 p-6 rounded-xl shadow-sm text-black">
+                    <h3 class="text-lg font-semibold mb-3 flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> Newsletter
+                    </h3>
+                    <p class="text-sm mb-4 opacity-90">Get the latest articles and resources delivered to your inbox.</p>
+                    <form class="space-y-3">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                        <button type="submit" class="w-full bg-white text-primary-600 font-medium py-2 px-4 rounded-md hover:bg-gray-100 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                    <p class="text-xs mt-3 opacity-75">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Resources Section -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Free Resources
+                </h2>
+                <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-600 sm:mt-4">
+                    Downloadable guides, templates, and tools to enhance your learning experience
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Resource 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="bg-primary-100 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-file-pdf text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">AI in Education Starter Guide</h3>
+                    <p class="text-gray-600 mb-4">A comprehensive introduction to implementing AI tools in educational settings.</p>
+                    <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+                        Download <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Resource 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="bg-primary-100 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-table text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Lesson Plan Template</h3>
+                    <p class="text-gray-600 mb-4">Customizable template with AI integration points for more effective lessons.</p>
+                    <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+                        Download <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Resource 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="bg-primary-100 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-video text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Video Tutorial Series</h3>
+                    <p class="text-gray-600 mb-4">Step-by-step video guides for getting started with LearnGen.ai platform.</p>
+                    <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+                        Coming Soon <i class="fas fa-play ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <div class="flex items-center">
+                            <a href="index.html" class="flex items-center">
+                                <i class="fas fa-brain text-2xl text-indigo-600 mr-2"></i>
+                                <span class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                                    LearnGen.ai
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-300">
+                        <i class="fas fa-graduation-cap mr-2"></i> Revolutionizing education with AI-powered tools.
+                    </p>
+                    <div class="mt-4 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-link mr-2"></i> Quick Links
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="Features.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Features</a></li>
+                        <li><a href="Pricing.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Pricing</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i> Other Links
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="faq.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> FAQs</a></li>
+                        <li><a href="Careers.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Careers</a></li>
+                        <li><a href="About Us.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> About Us</a></li>
+                        <li><a href="Privacy Policy.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> Contact Us
+                    </h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> support@learngenie.ai
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i> +1 234 567 890
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> 123 Learning St, EduCity
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2023 LearnGen.ai. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="terms.html" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="Privacy Policy.html" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Js/main.js"></script>
+</body>
+</html>

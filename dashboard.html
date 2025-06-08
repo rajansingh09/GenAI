@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parental Dashboard - Learning Analytics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .bg-light {
+            background-color: #f9fafb;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+        }
+        
+        :root {
+            --primary-color: #4e73df;
+            --secondary-color: #1cc88a;
+            --warning-color: #f6c23e;
+            --danger-color: #e74a3b;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fc;
+        }
+        
+        .card {
+            border-radius: 0.5rem;
+            box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            border: none;
+        }
+        
+        .card-header {
+            background-color: #f8f9fc;
+            border-bottom: 1px solid #e3e6f0;
+            font-weight: 600;
+        }
+        
+        .progress {
+            height: 1rem;
+            border-radius: 0.35rem;
+        }
+        
+        .badge-pill {
+            border-radius: 10rem;
+            padding: 0.5em 0.8em;
+        }
+        
+        .subject-tag {
+            display: inline-block;
+            padding: 0.25em 0.4em;
+            font-size: 75%;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.25rem;
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--primary-color);
+        }
+        
+        .alert-bell {
+            position: relative;
+        }
+        
+        .alert-bell::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            background-color: var(--danger-color);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Improved Logo Section -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <i class="fas fa-brain text-2xl text-indigo-600 mr-2"></i>
+                        <span class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                            LearnGen.ai
+                        </span>
+                    </a>
+                </div>
+    
+                <ul class="hidden md:flex space-x-6">
+                    <li>
+                        <a href="index.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-home mr-2"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Features.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-star mr-2"></i> Features
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Pricing.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-tag mr-2"></i> Pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-sign-in-alt mr-2"></i> Login
+                        </a>
+                    </li>
+                </ul>
+    
+                <div class="md:hidden">
+                    <button id="mobileMenuButton" class="text-gray-700 hover:text-indigo-600 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg pb-2">
+            <a href="index.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-home mr-3 w-5 text-center"></i> Home
+            </a>
+            <a href="Features.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-star mr-3 w-5 text-center"></i> Features
+            </a>
+            <a href="Pricing.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-tag mr-3 w-5 text-center"></i> Pricing
+            </a>
+            <a href="login.html" class="block text-indigo-600 hover:text-indigo-700 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-sign-in-alt mr-3 w-5 text-center"></i> Login
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="container-fluid mt-4">
+        <!-- Dashboard Overview -->
+        <div class="row">
+            <!-- Learning Progress Card -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Learning Progress</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">78%</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 78%"></div>
+                            </div>
+                            <small class="text-muted">5% increase from last week</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Time Spent Card -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-success h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    Time Spent</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">6.2 hrs</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-clock fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 62%"></div>
+                            </div>
+                            <small class="text-muted">Weekly goal: 10 hours</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Knowledge Gaps Card -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-warning h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                    Knowledge Gaps</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">3 Areas</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-search-minus fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <span class="subject-tag bg-warning text-white mr-1">Fractions</span>
+                            <span class="subject-tag bg-warning text-white mr-1">Grammar</span>
+                            <span class="subject-tag bg-warning text-white">Chemistry</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alerts Card -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-danger h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                    Alerts</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">2 New</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-bell fa-2x text-gray-300 alert-bell"></i>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <a href="#" class="text-danger small">Math quiz score dropped</a><br>
+                            <a href="#" class="text-danger small">Missed study session</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Row -->
+        <div class="row">
+            <!-- Learning Path Column -->
+            <div class="col-lg-8 mb-4">
+                <!-- Personalized Learning Path Card -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Personalized Learning Path</h6>
+                        <div class="dropdown no-arrow">
+                            <a class="dropdown-toggle" href="#" role="button" id="learningPathMenu" data-bs-toggle="dropdown">
+                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow">
+                                <li><a class="dropdown-item" href="#">Adjust Difficulty</a></li>
+                                <li><a class="dropdown-item" href="#">Change Focus Areas</a></li>
+                                <li><a class="dropdown-item" href="#">View Full Report</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="small font-weight-bold">Mathematics <span class="float-right">85%</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 85%"></div>
+                        </div>
+                        <h4 class="small font-weight-bold">Science <span class="float-right">72%</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 72%"></div>
+                        </div>
+                        <h4 class="small font-weight-bold">Language Arts <span class="float-right">68%</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 68%"></div>
+                        </div>
+                        <h4 class="small font-weight-bold">Social Studies <span class="float-right">79%</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 79%"></div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h6 class="font-weight-bold">Current Focus Areas</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Algebraic Equations
+                                    <span class="badge bg-primary badge-pill">High Priority</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Verb Tenses
+                                    <span class="badge bg-warning badge-pill">Medium Priority</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Chemical Reactions
+                                    <span class="badge bg-danger badge-pill">Critical Gap</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h6 class="font-weight-bold">Recommended Study Schedule</h6>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Day</th>
+                                            <th>Subject</th>
+                                            <th>Duration</th>
+                                            <th>Focus Area</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Mon</td>
+                                            <td>Math</td>
+                                            <td>45 min</td>
+                                            <td>Algebra</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tue</td>
+                                            <td>Science</td>
+                                            <td>30 min</td>
+                                            <td>Chemistry</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wed</td>
+                                            <td>Language</td>
+                                            <td>30 min</td>
+                                            <td>Grammar</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Thu</td>
+                                            <td>Math</td>
+                                            <td>45 min</td>
+                                            <td>Geometry</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fri</td>
+                                            <td>Review</td>
+                                            <td>60 min</td>
+                                            <td>All Weak Areas</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Dashboard Column -->
+            <div class="col-lg-4 mb-4">
+                <!-- Progress Dashboard Card -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Progress Dashboard</h6>
+                        <div class="dropdown no-arrow">
+                            <a class="dropdown-toggle" href="#" role="button" id="progressMenu" data-bs-toggle="dropdown">
+                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow">
+                                <li><a class="dropdown-item" href="#">View Details</a></li>
+                                <li><a class="dropdown-item" href="#">Export Data</a></li>
+                                <li><a class="dropdown-item" href="#">Set Alerts</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-pie pt-4 pb-2">
+                            <canvas id="subjectPerformanceChart" width="100%" height="300"></canvas>
+                        </div>
+                        <div class="mt-4 text-center small">
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-primary"></i> Math
+                            </span>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-success"></i> Science
+                            </span>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-info"></i> Language
+                            </span>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h6 class="font-weight-bold">Weekly Activity</h6>
+                            <canvas id="weeklyActivityChart" height="150"></canvas>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h6 class="font-weight-bold">Milestones Achieved</h6>
+                            <div class="alert alert-success p-2 mb-2">
+                                <i class="fas fa-trophy mr-2"></i> Mastered Fractions (Level 3)
+                            </div>
+                            <div class="alert alert-info p-2 mb-2">
+                                <i class="fas fa-star mr-2"></i> 10-Day Streak Achieved
+                            </div>
+                            <div class="alert alert-warning p-2">
+                                <i class="fas fa-book mr-2"></i> Read 25 Chapters
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Alert Settings Row -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Alert Settings</h6>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Performance Alerts</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control">
+                                        <option>Notify when score drops by 10%</option>
+                                        <option selected>Notify when score drops by 20%</option>
+                                        <option>Notify when score drops by 30%</option>
+                                        <option>Don't notify about performance</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Activity Alerts</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control">
+                                        <option selected>Notify after 1 missed session</option>
+                                        <option>Notify after 2 missed sessions</option>
+                                        <option>Notify after 3 missed sessions</option>
+                                        <option>Don't notify about activity</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Notification Method</label>
+                                <div class="col-sm-9">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="emailCheck" checked>
+                                        <label class="form-check-label" for="emailCheck">Email</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="appCheck" checked>
+                                        <label class="form-check-label" for="appCheck">Mobile App</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="smsCheck">
+                                        <label class="form-check-label" for="smsCheck">SMS</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-9 offset-sm-3">
+                                    <button type="submit" class="btn btn-primary">Save Settings</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <div class="flex items-center">
+                            <a href="index.html" class="flex items-center">
+                                <i class="fas fa-brain text-2xl text-indigo-600 mr-2"></i>
+                                <span class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                                    LearnGen.ai
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-300">
+                        <i class="fas fa-graduation-cap mr-2"></i> Revolutionizing education with AI-powered tools.
+                    </p>
+                    <div class="mt-4 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-link mr-2"></i> Quick Links
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="Features.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Features</a></li>
+                        <li><a href="Pricing.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Pricing</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i> Other Links
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="faq.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> FAQs</a></li>
+                        <li><a href="Careers.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Careers</a></li>
+                        <li><a href="About Us.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> About Us</a></li>
+                        <li><a href="Privacy Policy.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> Contact Us
+                    </h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> support@learngenie.ai
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i> +1 234 567 890
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> 123 Learning St, EduCity
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2023 LearnGen.ai. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="terms.html" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="Privacy Policy.html" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuButton').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Subject Performance Pie Chart
+        document.addEventListener('DOMContentLoaded', function() {
+            var ctx = document.getElementById("subjectPerformanceChart");
+            var subjectPerformanceChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Mathematics", "Science", "Language Arts", "Social Studies"],
+                    datasets: [{
+                        data: [35, 25, 20, 20],
+                        backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e'],
+                        hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf', '#dda20a'],
+                        hoverBorderColor: "rgba(234, 236, 244, 1)",
+                    }],
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    cutout: '70%',
+                },
+            });
+
+            // Weekly Activity Chart
+            var ctx2 = document.getElementById("weeklyActivityChart");
+            var weeklyActivityChart = new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+                    datasets: [{
+                        label: "Minutes",
+                        backgroundColor: '#4e73df',
+                        hoverBackgroundColor: '#2e59d9',
+                        borderColor: '#4e73df',
+                        data: [45, 30, 60, 45, 50, 20, 0],
+                    }],
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 120,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + ' min';
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="/Js/main.js"></script>
+</body>
+</html>

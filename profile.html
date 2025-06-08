@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - LearnGen.ai</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .bg-light {
+            background-color: #f9fafb;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        .profile-nav-item.active {
+            background-color: #eef2ff;
+            color: #4f46e5;
+        }
+        .profile-nav-item.active i {
+            color: #4f46e5;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <i class="fas fa-brain text-2xl text-indigo-600 mr-2"></i>
+                        <span class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                            LearnGen.ai
+                        </span>
+                    </a>
+                </div>
+    
+                <ul class="hidden md:flex space-x-6">
+                    <li>
+                        <a href="index.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-home mr-2"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Features.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-star mr-2"></i> Features
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-graduation-cap mr-2"></i> My Learning
+                        </a>
+                    </li>
+                    <li>
+                        <button id="logout-btn" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-sign-out-alt mr-2"></i> Logout
+                        </button>
+                    </li>
+                </ul>
+    
+                <div class="md:hidden">
+                    <button id="mobileMenuButton" class="text-gray-700 hover:text-indigo-600 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg pb-2">
+            <a href="index.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-home mr-3 w-5 text-center"></i> Home
+            </a>
+            <a href="Features.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-star mr-3 w-5 text-center"></i> Features
+            </a>
+            <a href="#" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-graduation-cap mr-3 w-5 text-center"></i> My Learning
+            </a>
+            <button id="mobile-logout-btn" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center w-full">
+                <i class="fas fa-sign-out-alt mr-3 w-5 text-center"></i> Logout
+            </button>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <!-- Sidebar Navigation -->
+                <div class="lg:col-span-3 mb-8 lg:mb-0">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 sticky top-6">
+                        <div class="text-center mb-6">
+                            <div class="mx-auto h-24 w-24 rounded-full bg-indigo-100 flex items-center justify-center mb-4 overflow-hidden border-4 border-white shadow">
+                                <img id="profile-avatar" src="" alt="Profile" class="h-full w-full object-cover">
+                            </div>
+                            <h3 id="profile-name" class="text-lg font-bold text-gray-900">Loading...</h3>
+                            <p id="profile-email" class="text-sm text-gray-500">user@example.com</p>
+                            <button id="edit-profile-btn" class="mt-3 text-sm text-indigo-600 hover:text-indigo-800 flex items-center justify-center mx-auto">
+                                <i class="fas fa-pencil-alt mr-1"></i> Edit Profile
+                            </button>
+                        </div>
+                        
+                        <nav class="space-y-1">
+                            <a href="#" class="profile-nav-item active bg-indigo-50 text-indigo-700 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                                <i class="fas fa-user-circle mr-3 text-indigo-500"></i>
+                                Profile Overview
+                            </a>
+                            <a href="my-courses.html" class="profile-nav-item text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                                <i class="fas fa-book mr-3 text-gray-400 group-hover:text-gray-500"></i>
+                                My Courses
+                            </a>
+                            <a href="progress.html" class="profile-nav-item text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                                <i class="fas fa-chart-line mr-3 text-gray-400 group-hover:text-gray-500"></i>
+                                Learning Progress
+                            </a>
+                            <a href="settings.html" class="profile-nav-item text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                                <i class="fas fa-cog mr-3 text-gray-400 group-hover:text-gray-500"></i>
+                                Account Settings
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="lg:col-span-9">
+                    <div class="bg-white shadow rounded-lg p-6 mb-8">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-2xl font-bold text-gray-900">Profile Overview</h2>
+                            <button id="edit-profile-btn-2" class="text-sm text-indigo-600 hover:text-indigo-800 flex items-center">
+                                <i class="fas fa-pencil-alt mr-1"></i> Edit
+                            </button>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-900 mb-3">Personal Information</h3>
+                                <div class="space-y-4">
+                                    <div>
+                                        <p class="text-sm text-gray-500">Full Name</p>
+                                        <p id="profile-fullname" class="mt-1 text-gray-900">Loading...</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500">Email</p>
+                                        <p id="profile-email-2" class="mt-1 text-gray-900">user@example.com</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500">Grade Level</p>
+                                        <p id="profile-grade" class="mt-1 text-gray-900">Not specified</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-900 mb-3">Learning Statistics</h3>
+                                <div class="space-y-4 learning-statistics">
+                                    <div>
+                                        <p class="text-sm text-gray-500">Courses Completed</p>
+                                        <p class="mt-1 text-gray-900">3</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500">Current Streak</p>
+                                        <p class="mt-1 text-gray-900">5 days</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500">Total Learning Hours</p>
+                                        <p class="mt-1 text-gray-900">24.5 hours</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white shadow rounded-lg p-6 recent-activity">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Recent Activity</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 rounded-full p-2 mr-4">
+                                    <i class="fas fa-check-circle text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">Completed "Algebra Basics"</p>
+                                    <p class="text-sm text-gray-500">2 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 rounded-full p-2 mr-4">
+                                    <i class="fas fa-book-open text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">Started "Geometry Fundamentals"</p>
+                                    <p class="text-sm text-gray-500">1 day ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 rounded-full p-2 mr-4">
+                                    <i class="fas fa-trophy text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">Earned "Math Whiz" badge</p>
+                                    <p class="text-sm text-gray-500">3 days ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Edit Profile Modal -->
+    <div id="edit-profile-modal" class="fixed z-10 inset-0 overflow-y-auto hidden">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+            
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+                        <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 sm:mx-0 sm:h-10 sm:w-10">
+                            <i class="fas fa-user-edit text-indigo-600"></i>
+                        </div>
+                        <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
+                            <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                                Edit Profile
+                            </h3>
+                            <div class="mt-4 space-y-4">
+                                <div>
+                                    <label for="edit-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                    <input type="text" id="edit-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                                </div>
+                                <div>
+                                    <label for="edit-grade" class="block text-sm font-medium text-gray-700">Grade Level</label>
+                                    <select id="edit-grade" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                                        <option value="">Select Grade</option>
+                                        <option value="Elementary">Elementary School</option>
+                                        <option value="Middle">Middle School</option>
+                                        <option value="High">High School</option>
+                                        <option value="College">College</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button type="button" id="save-profile-btn" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm">
+                        Save Changes
+                    </button>
+                    <button type="button" id="cancel-edit-btn" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i class="fas fa-brain text-xl text-indigo-600 mr-2"></i>
+                    <span class="text-lg font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                        LearnGen.ai
+                    </span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="privacy.html" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="terms.html" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white text-sm">Contact Us</a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+                &copy; 2023 LearnGen.ai. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase and Auth Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        // Load user data when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            getCurrentUserData()
+                .then(user => {
+                    // Display user name and email in profile
+                    document.getElementById('profile-name').textContent = user.name || "No Name";
+                    document.getElementById('profile-fullname').textContent = user.name || "No Name";
+                    document.getElementById('profile-email').textContent = user.email || "No Email";
+                    document.getElementById('profile-email-2').textContent = user.email || "No Email";
+                    document.getElementById('profile-avatar').src = user.avatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name || "User")}&background=7c3aed&color=fff`;
+
+                    if (user.grade) {
+                        document.getElementById('profile-grade').textContent = user.grade;
+                    }
+
+                    // Set values in edit modal
+                    document.getElementById('edit-name').value = user.name || "";
+                    if (user.grade) {
+                        document.getElementById('edit-grade').value = user.grade;
+                    }
+
+                    // Show welcome or progress based on isNewUser
+                    if (user.isNewUser) {
+                        document.querySelector('.learning-statistics').style.display = 'none';
+                        document.querySelector('.recent-activity').style.display = 'none';
+                        document.getElementById('profile-fullname').textContent = "Welcome, " + (user.name || "User") + "!";
+                    } else {
+                        document.querySelector('.learning-statistics').style.display = '';
+                        document.querySelector('.recent-activity').style.display = '';
+                    }
+                })
+                .catch(error => {
+                    console.error("Error loading user data:", error);
+                });
+
+        // Logout functionality
+        document.getElementById('logout-btn').addEventListener('click', function() {
+            logout()
+                .then(() => {
+                    // Redirect handled by auth state observer
+                })
+                .catch(error => {
+                    console.error("Logout error:", error);
+                });
+        });
+
+        if (document.getElementById('mobile-logout-btn')) {
+            document.getElementById('mobile-logout-btn').addEventListener('click', function() {
+                logout()
+                    .then(() => {
+                        // Redirect handled by auth state observer
+                    })
+                    .catch(error => {
+                        console.error("Logout error:", error);
+                    });
+            });
+        }
+
+        // Edit profile modal
+        const editModal = document.getElementById('edit-profile-modal');
+        document.getElementById('edit-profile-btn').addEventListener('click', function() {
+            editModal.classList.remove('hidden');
+        });
+        document.getElementById('edit-profile-btn-2').addEventListener('click', function() {
+            editModal.classList.remove('hidden');
+        });
+        document.getElementById('cancel-edit-btn').addEventListener('click', function() {
+            editModal.classList.add('hidden');
+        });
+        document.getElementById('save-profile-btn').addEventListener('click', function() {
+            const name = document.getElementById('edit-name').value;
+            const grade = document.getElementById('edit-grade').value;
+            updateProfile({
+                name: name,
+                grade: grade,
+                avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=7c3aed&color=fff`
+            })
+            .then(() => {
+                // Update displayed information
+                document.getElementById('profile-name').textContent = name;
+                document.getElementById('profile-fullname').textContent = name;
+                document.getElementById('profile-avatar').src = `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=7c3aed&color=fff`;
+                document.getElementById('profile-grade').textContent = grade || 'Not specified';
+                // Close modal
+                editModal.classList.add('hidden');
+            })
+            .catch(error => {
+                console.error("Error updating profile:", error);
+                alert("Failed to update profile. Please try again.");
+            });
+        });
+    });
+
+    // Show/hide logout button based on auth state
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            document.getElementById('logout-btn').style.display = '';
+            if (document.getElementById('mobile-logout-btn')) {
+                document.getElementById('mobile-logout-btn').style.display = '';
+            }
+        } else {
+            document.getElementById('logout-btn').style.display = 'none';
+            if (document.getElementById('mobile-logout-btn')) {
+                document.getElementById('mobile-logout-btn').style.display = 'none';
+            }
+        }
+    });
+</script>
+</body>
+</html>

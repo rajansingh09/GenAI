@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - LearnGen.ai</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .bg-light {
+            background-color: #f9fafb;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        .pricing-card {
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 1.75rem;
+        }
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10B981;
+            font-weight: bold;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <i class="fas fa-brain text-2xl text-indigo-600 mr-2"></i>
+                        <span class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                            LearnGen.ai
+                        </span>
+                    </a>
+                </div>
+    
+                <ul class="hidden md:flex space-x-6">
+                    <li>
+                        <a href="index.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-home mr-2"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Features.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-star mr-2"></i> Features
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Pricing.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-tag mr-2"></i> Pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-sign-in-alt mr-2"></i> Login
+                        </a>
+                    </li>
+                </ul>
+    
+                <div class="md:hidden">
+                    <button id="mobileMenuButton" class="text-gray-700 hover:text-indigo-600 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg pb-2">
+            <a href="index.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-home mr-3 w-5 text-center"></i> Home
+            </a>
+            <a href="Features.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-star mr-3 w-5 text-center"></i> Features
+            </a>
+            <a href="Pricing.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-tag mr-3 w-5 text-center"></i> Pricing
+            </a>
+            <a href="login.html" class="block text-indigo-600 hover:text-indigo-700 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-sign-in-alt mr-3 w-5 text-center"></i> Login
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="block">Simple, Transparent</span>
+                    <span class="block">Pricing</span>
+                </h1>
+                <p class="text-xl text-indigo-100 max-w-3xl mx-auto">
+                    <i class="fas fa-tag mr-2"></i> Choose the perfect plan for your learning journey
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    <span class="block">Choose Your</span>
+                    <span class="block text-indigo-600">Learning Plan</span>
+                </h2>
+                <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500">
+                    <i class="fas fa-lightbulb text-yellow-400 mr-2"></i> Affordable options for every learner
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="pricing-card bg-white p-8 rounded-xl border-2 border-indigo-600 shadow-lg relative">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Basic</h3>
+                        <p class="text-gray-600">Perfect for students starting their learning journey</p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <div class="flex justify-center items-baseline">
+                            <span class="text-5xl font-bold text-gray-900 mr-1">₹0</span>
+                            <span class="text-lg text-gray-500">/month</span>
+                        </div>
+                        <div class="mt-3 bg-indigo-50 inline-block px-3 py-1 rounded-full border border-indigo-100">
+                            <p class="text-sm font-medium text-indigo-700">
+                                <span class="line-through text-gray-500 mr-1"></span>
+                                No credit card required
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="feature-list space-y-3 text-gray-700 mb-8">
+                        <li>Access to AI Tutor (10 queries/day)</li>
+                        <li>Personalized Learning Path</li>
+                        <li>Basic Progress Tracking</li>
+                        <li>Community Support</li>
+                        <li>Email support (48h response time)</li>
+                    </ul>
+                    <a href="#" class="block w-full text-center bg-indigo-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-indigo-700 transition shadow-md">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Pro Plan (Featured) -->
+                <div class="pricing-card bg-white p-8 rounded-xl border-2 border-indigo-600 shadow-lg relative">
+                    <div class="absolute top-0 right-0 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                        MOST POPULAR
+                    </div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Premium</h3>
+                        <p class="text-gray-600">For serious learners who want to accelerate progress</p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <span class="text-5xl font-bold text-gray-900">₹200</span>
+                        <span class="text-lg text-gray-500">/month</span>
+                        <div class="mt-3 bg-indigo-50 inline-block px-3 py-1 rounded-full border border-indigo-100">
+                            <p class="text-sm font-medium text-indigo-700">
+                                <span class="line-through text-gray-500 mr-1">₹3,588</span>
+                                ₹2,988 billed annually (save ₹600)
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="feature-list space-y-3 text-gray-700 mb-8">
+                        <li>Smart learning path recommendations</li>
+                        <li>Weekly progress reports</li>
+                        <li>Unlimited AI Tutor queries</li>
+                        <li>Interactive quizzes and assignments</li>
+                        <li>Priority Email Support</li>
+                        <li>Full Course Library Access</li>
+                    </ul>
+                    <a href="#" class="block w-full text-center bg-indigo-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-indigo-700 transition shadow-md">
+                        Start 7-Day Free Trial
+                    </a>
+                </div>
+                
+                <!-- Premium Plan -->
+                <div class="pricing-card bg-white p-8 rounded-xl border-2 border-indigo-600 shadow-lg relative">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                        <p class="text-gray-600">For professionals and institutions</p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <span class="text-3xl font-bold text-gray-900">Contact Sales Team</span>
+                        <div class="mt-3 bg-indigo-50 inline-block px-3 py-1 rounded-full border border-indigo-100">
+                            <p class="text-sm font-medium text-indigo-700">
+                                Custom plans for 500+ users
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="feature-list space-y-3 text-gray-700 mb-8">
+                        <li>Team Progress Dashboard</li>
+                        <li>Unlimited AI Tutor queries</li>
+                        <li>Full Course Library Access</li>
+                        <li>Dedicated expert consultations</li>
+                        <li>Official certification programs</li>
+                        <li>24/7 priority enterprise support</li>
+                        <li>Advanced team analytics dashboard</li>
+                        <li>Interactive quizzes and assignments</li>
+                    </ul>
+                    <a href="contact.html" class="block w-full text-center bg-indigo-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-indigo-700 transition shadow-md">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to transform your learning?</h2>
+            <p class="text-xl max-w-3xl mx-auto mb-8">Join thousands of students who are achieving their goals faster with LearnGen.ai</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="signup.html" class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 md:py-4 md:text-lg md:px-10 transition shadow-lg">
+                    <i class="fas fa-rocket mr-2"></i> Start Free Trial
+                </a>
+                <a href="contact.html" class="px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-indigo-700 hover:bg-indigo-800 md:py-4 md:text-lg md:px-10 transition">
+                    <i class="fas fa-question-circle mr-2"></i> Ask Questions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <div class="flex items-center">
+                            <a href="index.html" class="flex items-center">
+                                <i class="fas fa-brain text-2xl text-indigo-600 mr-2"></i>
+                                <span class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                                    LearnGen.ai
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-300">
+                        <i class="fas fa-graduation-cap mr-2"></i> Revolutionizing education with AI-powered tools.
+                    </p>
+                    <div class="mt-4 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-link mr-2"></i> Quick Links
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="Features.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Features</a></li>
+                        <li><a href="Pricing.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Pricing</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i> Other Links
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="faq.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> FAQs</a></li>
+                        <li><a href="Careers.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Careers</a></li>
+                        <li><a href="About Us.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> About Us</a></li>
+                        <li><a href="Privacy Policy.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> Contact Us
+                    </h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> support@learngenie.ai
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i> +1 234 567 890
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> 123 Learning St, EduCity
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2023 LearnGen.ai. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="terms.html" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="Privacy Policy.html" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Js/main.js"></script>
+</body>
+</html>

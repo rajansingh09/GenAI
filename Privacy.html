@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - LearnGen.ai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .policy-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .policy-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .highlight-box {
+            background-color: rgba(79, 70, 229, 0.05);
+            border-left: 4px solid #4F46E5;
+        }
+        .nav-link.active {
+            color: #4F46E5;
+            font-weight: 600;
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 80px;
+            align-self: start;
+        }
+        .content-section {
+            scroll-margin-top: 100px;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        },
+                        secondary: {
+                            600: '#7c3aed',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <i class="fas fa-brain text-2xl text-indigo-600 mr-2"></i>
+                        <span class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                            LearnGen.ai
+                        </span>
+                    </a>
+                </div>
+    
+                <ul class="hidden md:flex space-x-6">
+                    <li>
+                        <a href="index.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-home mr-2"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Features.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-star mr-2"></i> Features
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Pricing.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-tag mr-2"></i> Pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors shadow-sm hover:shadow-md">
+                            <i class="fas fa-sign-in-alt mr-2"></i> Login
+                        </a>
+                    </li>
+                </ul>
+    
+                <div class="md:hidden">
+                    <button id="mobileMenuButton" class="text-gray-700 hover:text-indigo-600 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg pb-2">
+            <a href="index.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-home mr-3 w-5 text-center"></i> Home
+            </a>
+            <a href="Features.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-star mr-3 w-5 text-center"></i> Features
+            </a>
+            <a href="Pricing.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-tag mr-3 w-5 text-center"></i> Pricing
+            </a>
+            <a href="login.html" class="block text-indigo-600 hover:text-indigo-700 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-sign-in-alt mr-3 w-5 text-center"></i> Login
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4yIj48cGF0aCBkPSJNMzYgMzRjMC0xLjEuOS0yIDItMmgxNmMxLjEgMCAyIC45IDIgMnYxNmMwIDEuMS0uOSAyLTIgMkgzOGMtMS4xIDAtMi0uOS0yLTJWMzR6TTIgMzRjMC0xLjEuOS0yIDItMmgxNmMxLjEgMCAyIC45IDIgMnYxNmMwIDEuMS0uOSAyLTIgMkg0Yy0xLjEgMC0yLS45LTItMlYzNHpNMzYgMmMwLTEuMS45LTIgMi0yaDE2YzEuMSAwIDIgLjkgMiAydjE2YzAgMS4xLS45IDItMiAySDM4Yy0xLjEgMC0yLS45LTItMlYyek0yIDJjMC0xLjEuOS0yIDItMmgxNmMxLjEgMCAyIC45IDIgMnYxNmMwIDEuMS0uOSAyLTIgMkg0Yy0xLjEgMC0yLS45LTItMlYyeiIvPjwvZz48L2c+PC9zdmc+')]"></div>
+        </div>
+        <div class="max-w-4xl mx-auto text-center relative px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Privacy Policy</h1>
+            <p class="text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                Your data security and privacy are our top priority
+            </p>
+        </div>
+    </header>
+
+    
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar Navigation -->
+            <div class="lg:w-1/4">
+                <div class="sticky-nav bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center text-indigo-600">
+                        <i class="fas fa-bookmark mr-2"></i> Quick Navigation
+                    </h3>
+                    <nav class="space-y-2">
+                        <a href="#information-collected" class="block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors nav-link">
+                            <i class="fas fa-database text-xs mr-3 text-indigo-600 w-4 text-center"></i> Data Collected
+                        </a>
+                        <a href="#data-use" class="block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors nav-link">
+                            <i class="fas fa-chart-line text-xs mr-3 text-indigo-600 w-4 text-center"></i> How We Use Data
+                        </a>
+                        <a href="#data-protection" class="block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors nav-link">
+                            <i class="fas fa-lock text-xs mr-3 text-indigo-600 w-4 text-center"></i> Data Protection
+                        </a>
+                        <a href="#cookies" class="block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors nav-link">
+                            <i class="fas fa-cookie text-xs mr-3 text-indigo-600 w-4 text-center"></i> Cookies
+                        </a>
+                        <a href="#third-parties" class="block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors nav-link">
+                            <i class="fas fa-users text-xs mr-3 text-indigo-600 w-4 text-center"></i> Third Parties
+                        </a>
+                        <a href="#your-rights" class="block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors nav-link">
+                            <i class="fas fa-user-shield text-xs mr-3 text-indigo-600 w-4 text-center"></i> Your Rights
+                        </a>
+                        <a href="#policy-updates" class="block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors nav-link">
+                            <i class="fas fa-sync-alt text-xs mr-3 text-indigo-600 w-4 text-center"></i> Policy Updates
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Policy Content -->
+            <div class="lg:w-3/4">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                            <span class="block">Our Commitment to</span>
+                            <span class="block gradient-text">Your Privacy</span>
+                        </h2>
+                        <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                            At LearnGen.ai, we're committed to protecting your personal information and being transparent about our data practices.
+                        </p>
+                    </div>
+
+                    <div class="space-y-8">
+                        <!-- Information Collected -->
+                        <div id="information-collected" class="policy-card content-section bg-white p-6 rounded-lg border border-gray-100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600 mt-1 mr-4">
+                                    <i class="fas fa-database text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Information We Collect</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        We collect information to provide better services to all our users. The types of personal information we collect include:
+                                    </p>
+                                    <ul class="list-disc pl-6 space-y-3 text-gray-600 mb-4">
+                                        <li><strong>Account Information:</strong> When you create an account, we collect your name, email address, and password.</li>
+                                        <li><strong>Learning Data:</strong> We collect information about your learning progress, quiz results, and course interactions.</li>
+                                        <li><strong>Technical Information:</strong> We collect log data, device information, and IP addresses for security and analytics.</li>
+                                        <li><strong>Payment Information:</strong> For paid plans, we collect payment details through our secure payment processor.</li>
+                                    </ul>
+                                    <div class="highlight-box p-4 rounded-lg mb-4">
+                                        <p class="text-sm text-gray-700">
+                                            <i class="fas fa-info-circle text-indigo-600 mr-2"></i> We minimize data collection to only what's necessary to provide and improve our services.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- How We Use Data -->
+                        <div id="data-use" class="policy-card content-section bg-white p-6 rounded-lg border border-gray-100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600 mt-1 mr-4">
+                                    <i class="fas fa-chart-line text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">2. How We Use Your Information</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        We use the information we collect to provide, maintain, and improve our services, including:
+                                    </p>
+                                    <ul class="list-disc pl-6 space-y-3 text-gray-600 mb-4">
+                                        <li>Personalizing your learning experience and recommendations</li>
+                                        <li>Improving our AI algorithms and content quality</li>
+                                        <li>Communicating with you about service updates and offers</li>
+                                        <li>Ensuring platform security and preventing fraud</li>
+                                        <li>Conducting research and analysis to improve our services</li>
+                                    </ul>
+                                    <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                                        <h4 class="font-semibold text-indigo-800 mb-2 flex items-center">
+                                            <i class="fas fa-handshake mr-2"></i> We Do Not Sell Your Data
+                                        </h4>
+                                        <p class="text-sm text-gray-700">
+                                            LearnGen.ai does not sell, rent, or trade your personal information with third parties for their marketing purposes.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Data Protection -->
+                        <div id="data-protection" class="policy-card content-section bg-white p-6 rounded-lg border border-gray-100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600 mt-1 mr-4">
+                                    <i class="fas fa-lock text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Data Security & Protection</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        We implement robust security measures to protect your information:
+                                    </p>
+                                    <ul class="list-disc pl-6 space-y-3 text-gray-600 mb-4">
+                                        <li>Encryption of data in transit using TLS/SSL protocols</li>
+                                        <li>Secure storage with industry-standard encryption</li>
+                                        <li>Regular security audits and vulnerability testing</li>
+                                        <li>Access controls and staff training on data protection</li>
+                                    </ul>
+                                    <div class="highlight-box p-4 rounded-lg">
+                                        <h4 class="font-semibold text-indigo-800 mb-2 flex items-center">
+                                            <i class="fas fa-shield-alt mr-2"></i> Our Security Commitment
+                                        </h4>
+                                        <p class="text-sm text-gray-700">
+                                            While no system is 100% secure, we work hard to protect your information and are committed to notifying you if any security breach affects your data.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cookies -->
+                        <div id="cookies" class="policy-card content-section bg-white p-6 rounded-lg border border-gray-100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600 mt-1 mr-4">
+                                    <i class="fas fa-cookie text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">4. Cookies & Tracking Technologies</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        We use cookies and similar technologies to:
+                                    </p>
+                                    <ul class="list-disc pl-6 space-y-3 text-gray-600 mb-4">
+                                        <li>Authenticate users and maintain sessions</li>
+                                        <li>Remember your preferences and settings</li>
+                                        <li>Analyze site traffic and usage patterns</li>
+                                        <li>Deliver personalized content and ads (with your consent)</li>
+                                    </ul>
+                                    <p class="text-gray-600">
+                                        You can control cookies through your browser settings. Disabling cookies may affect some features of our service.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Third Parties -->
+                        <div id="third-parties" class="policy-card content-section bg-white p-6 rounded-lg border border-gray-100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600 mt-1 mr-4">
+                                    <i class="fas fa-users text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">5. Third-Party Services</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        We use trusted third-party services that may process your information:
+                                    </p>
+                                    <ul class="list-disc pl-6 space-y-3 text-gray-600 mb-4">
+                                        <li><strong>Payment Processors:</strong> For secure payment handling</li>
+                                        <li><strong>Analytics Providers:</strong> To understand usage patterns</li>
+                                        <li><strong>Cloud Services:</strong> For data storage and processing</li>
+                                        <li><strong>Customer Support:</strong> To assist with your inquiries</li>
+                                    </ul>
+                                    <p class="text-gray-600">
+                                        These providers are contractually obligated to protect your data and use it only for the services we've requested.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Your Rights -->
+                        <div id="your-rights" class="policy-card content-section bg-white p-6 rounded-lg border border-gray-100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600 mt-1 mr-4">
+                                    <i class="fas fa-user-shield text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">6. Your Privacy Rights</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        You have rights regarding your personal information:
+                                    </p>
+                                    <ul class="list-disc pl-6 space-y-3 text-gray-600 mb-4">
+                                        <li><strong>Access:</strong> Request a copy of your personal data</li>
+                                        <li><strong>Correction:</strong> Update inaccurate information</li>
+                                        <li><strong>Deletion:</strong> Request deletion of your data</li>
+                                        <li><strong>Objection:</strong> Object to certain processing</li>
+                                        <li><strong>Portability:</strong> Request transfer of your data</li>
+                                    </ul>
+                                    <div class="bg-indigo-50 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-indigo-800 mb-2 flex items-center">
+                                            <i class="fas fa-envelope mr-2"></i> Contact Us
+                                        </h4>
+                                        <p class="text-sm text-gray-700">
+                                            To exercise these rights or for any privacy-related questions, please contact our Data Protection Officer at:
+                                            <a href="mailto:privacy@learngenie.ai" class="text-indigo-600 hover:underline">privacy@learngenie.ai</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Policy Updates -->
+                        <div id="policy-updates" class="policy-card content-section bg-white p-6 rounded-lg border border-gray-100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600 mt-1 mr-4">
+                                    <i class="fas fa-sync-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">7. Policy Updates</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        We may update this Privacy Policy periodically. When we do, we'll revise the "Last Updated" date at the top of this page.
+                                    </p>
+                                    <p class="text-gray-600">
+                                        For significant changes, we'll notify you through email or a prominent notice on our website before the changes take effect.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact CTA -->
+    <section class="py-16 bg-indigo-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-indigo-100">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Questions About Our Privacy Policy?</h3>
+                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+                    Our team is happy to clarify any aspect of our data practices or address your privacy concerns.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition shadow-md">
+                        <i class="fas fa-envelope mr-2"></i> Contact Our Privacy Team
+                    </a>
+                    <a href="faq.html" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition">
+                        <i class="fas fa-question-circle mr-2"></i> Visit FAQs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <div class="flex items-center">
+                            <a href="index.html" class="flex items-center">
+                                <i class="fas fa-brain text-2xl text-indigo-600 mr-2"></i>
+                                <span class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                                    LearnGen.ai
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-300">
+                        <i class="fas fa-graduation-cap mr-2"></i> Revolutionizing education with AI-powered tools.
+                    </p>
+                    <div class="mt-4 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-link mr-2"></i> Quick Links
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="Features.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Features</a></li>
+                        <li><a href="Pricing.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Pricing</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i> Other Links
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="faq.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> FAQs</a></li>
+                        <li><a href="Careers.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Careers</a></li>
+                        <li><a href="About Us.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> About Us</a></li>
+                        <li><a href="Privacy Policy.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> Contact Us
+                    </h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> support@learngenie.ai
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i> +1 234 567 890
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> 123 Learning St, EduCity
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2023 LearnGen.ai. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="terms.html" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="Privacy Policy.html" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuButton').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling and active link highlighting
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                // Scroll to section
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Highlight active section based on scroll position
+        const sections = document.querySelectorAll('.content-section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <script src="/Js/main.js"></script>
+</body>
+</html>

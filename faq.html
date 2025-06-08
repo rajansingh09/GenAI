@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - LearnGen.ai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        },
+                        secondary: {
+                            600: '#7c3aed',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center group">
+                        <i class="fas fa-brain text-2xl text-primary-600 mr-2 group-hover:text-secondary-600 transition-colors"></i>
+                        <span class="text-xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                            LearnGen.ai
+                        </span>
+                    </a>
+                </div>
+    
+                <ul class="hidden md:flex space-x-6">
+                    <li>
+                        <a href="index.html" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-home mr-2"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Features.html" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-star mr-2"></i> Features
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Pricing.html" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-tag mr-2"></i> Pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="text-white bg-primary-600 hover:bg-primary-700 px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors shadow-sm hover:shadow-md">
+                            <i class="fas fa-sign-in-alt mr-2"></i> Login
+                        </a>
+                    </li>
+                </ul>
+    
+                <div class="md:hidden">
+                    <button id="mobileMenuButton" class="text-gray-700 hover:text-primary-600 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg pb-2">
+            <a href="index.html" class="block text-gray-700 hover:text-primary-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-home mr-3 w-5 text-center"></i> Home
+            </a>
+            <a href="Features.html" class="block text-gray-700 hover:text-primary-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-star mr-3 w-5 text-center"></i> Features
+            </a>
+            <a href="Pricing.html" class="block text-gray-700 hover:text-primary-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-tag mr-3 w-5 text-center"></i> Pricing
+            </a>
+            <a href="login.html" class="block text-primary-600 hover:text-primary-700 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-sign-in-alt mr-3 w-5 text-center"></i> Login
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4yIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00eiIvPjwvZz48L2c+PC9zdmc+')]"></div>
+        </div>
+        <div class="max-w-4xl mx-auto text-center relative px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Frequently Asked Questions</h1>
+            <p class="text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed">
+                Everything you need to know about LearnGen.ai in one place.
+            </p>
+            <div class="mt-8">
+                <div class="relative max-w-md mx-auto">
+                    <input type="text" placeholder="Search FAQs..." class="w-full px-6 py-3 rounded-full border-0 focus:ring-2 focus:ring-white shadow-md">
+                    <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white text-primary-600 p-2 rounded-full hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FAQs Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">Common Questions</h2>
+                <p class="mt-3 text-lg text-gray-600">
+                    Can't find what you're looking for? <a href="contact.html" class="text-primary-600 hover:underline">Contact our support team</a>.
+                </p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ Category 1 -->
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-question-circle text-primary-600 mr-3"></i> General Questions
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <!-- FAQ Item 1 -->
+                        <div class="group border border-gray-200 rounded-lg overflow-hidden transition-all hover:border-primary-500">
+                            <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                                <span class="text-lg font-medium text-gray-900 group-hover:text-primary-600">What is LearnGen.ai?</span>
+                                <i class="fas fa-chevron-down text-primary-600 transition-transform transform group-[.active]:rotate-180"></i>
+                            </button>
+                            <div class="px-6 pb-6 hidden group-[.active]:block">
+                                <p class="text-gray-600">
+                                    LearnGen.ai is an AI-powered learning platform that provides personalized learning paths, instant tutoring, and progress tracking to help students achieve their academic goals. Our platform adapts to each learner's unique needs, providing tailored content and recommendations.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 2 -->
+                        <div class="group border border-gray-200 rounded-lg overflow-hidden transition-all hover:border-primary-500">
+                            <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                                <span class="text-lg font-medium text-gray-900 group-hover:text-primary-600">How does the AI Tutor work?</span>
+                                <i class="fas fa-chevron-down text-primary-600 transition-transform transform group-[.active]:rotate-180"></i>
+                            </button>
+                            <div class="px-6 pb-6 hidden group-[.active]:block">
+                                <p class="text-gray-600">
+                                    Our AI Tutor uses advanced natural language processing and machine learning algorithms to understand your questions, explain concepts in multiple ways, and provide step-by-step guidance in real-time. It learns from your interactions to provide increasingly personalized support.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Category 2 -->
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-dollar-sign text-primary-600 mr-3"></i> Pricing & Plans
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <!-- FAQ Item 3 -->
+                        <div class="group border border-gray-200 rounded-lg overflow-hidden transition-all hover:border-primary-500">
+                            <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                                <span class="text-lg font-medium text-gray-900 group-hover:text-primary-600">Is LearnGen.ai free to use?</span>
+                                <i class="fas fa-chevron-down text-primary-600 transition-transform transform group-[.active]:rotate-180"></i>
+                            </button>
+                            <div class="px-6 pb-6 hidden group-[.active]:block">
+                                <p class="text-gray-600">
+                                    Yes! LearnGen.ai offers a free plan with basic features including limited access to our AI tutor and standard learning materials. For unlimited access, personalized learning paths, and advanced analytics, we offer premium subscription plans starting at $9.99/month.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 4 -->
+                        <div class="group border border-gray-200 rounded-lg overflow-hidden transition-all hover:border-primary-500">
+                            <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                                <span class="text-lg font-medium text-gray-900 group-hover:text-primary-600">Can I cancel my subscription anytime?</span>
+                                <i class="fas fa-chevron-down text-primary-600 transition-transform transform group-[.active]:rotate-180"></i>
+                            </button>
+                            <div class="px-6 pb-6 hidden group-[.active]:block">
+                                <p class="text-gray-600">
+                                    Absolutely. You can cancel your subscription at any time through your account settings. When you cancel, you'll continue to have access to premium features until the end of your current billing period.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Category 3 -->
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-book text-primary-600 mr-3"></i> Learning Content
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <!-- FAQ Item 5 -->
+                        <div class="group border border-gray-200 rounded-lg overflow-hidden transition-all hover:border-primary-500">
+                            <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                                <span class="text-lg font-medium text-gray-900 group-hover:text-primary-600">What subjects does LearnGen.ai support?</span>
+                                <i class="fas fa-chevron-down text-primary-600 transition-transform transform group-[.active]:rotate-180"></i>
+                            </button>
+                            <div class="px-6 pb-6 hidden group-[.active]:block">
+                                <p class="text-gray-600">
+                                    LearnGen.ai currently supports mathematics (from basic arithmetic to calculus), sciences (biology, chemistry, physics), computer science, history, and language arts. We're constantly adding new subjects based on user demand and feedback.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 6 -->
+                        <div class="group border border-gray-200 rounded-lg overflow-hidden transition-all hover:border-primary-500">
+                            <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                                <span class="text-lg font-medium text-gray-900 group-hover:text-primary-600">How often is new content added?</span>
+                                <i class="fas fa-chevron-down text-primary-600 transition-transform transform group-[.active]:rotate-180"></i>
+                            </button>
+                            <div class="px-6 pb-6 hidden group-[.active]:block">
+                                <p class="text-gray-600">
+                                    We update our content library weekly with new lessons, practice problems, and learning materials. Our AI also generates fresh practice questions and explanations daily based on your learning progress and needs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Category 4 -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-user text-primary-600 mr-3"></i> Account & Support
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <!-- FAQ Item 7 -->
+                        <div class="group border border-gray-200 rounded-lg overflow-hidden transition-all hover:border-primary-500">
+                            <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                                <span class="text-lg font-medium text-gray-900 group-hover:text-primary-600">How can I track my progress?</span>
+                                <i class="fas fa-chevron-down text-primary-600 transition-transform transform group-[.active]:rotate-180"></i>
+                            </button>
+                            <div class="px-6 pb-6 hidden group-[.active]:block">
+                                <p class="text-gray-600">
+                                    Your dashboard provides detailed analytics on your learning progress, including time spent, concepts mastered, and areas needing improvement. Premium users receive weekly progress reports with personalized recommendations for optimal learning.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 8 -->
+                        <div class="group border border-gray-200 rounded-lg overflow-hidden transition-all hover:border-primary-500">
+                            <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                                <span class="text-lg font-medium text-gray-900 group-hover:text-primary-600">How do I contact support?</span>
+                                <i class="fas fa-chevron-down text-primary-600 transition-transform transform group-[.active]:rotate-180"></i>
+                            </button>
+                            <div class="px-6 pb-6 hidden group-[.active]:block">
+                                <p class="text-gray-600">
+                                    You can reach our support team 24/7 by emailing <a href="mailto:support@learngenie.ai" class="text-primary-600 hover:underline">support@learngenie.ai</a> or calling +1 (555) 123-4567 during business hours (9am-5pm EST). For quick answers, try asking our AI assistant first - it can resolve most common issues instantly!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-primary-600 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Still have questions?</h2>
+            <p class="text-xl max-w-2xl mx-auto mb-8">
+                Our team is ready to help you get the most out of LearnGen.ai.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-primary-600 bg-white hover:bg-gray-50 shadow-sm transition-all hover:shadow-md">
+                    Contact Support <i class="fas fa-envelope ml-2"></i>
+                </a>
+                <a href="Pricing.html" class="inline-flex items-center justify-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-primary-700 transition-colors">
+                    View Pricing <i class="fas fa-tag ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <div class="flex items-center">
+                            <a href="index.html" class="flex items-center">
+                                <i class="fas fa-brain text-2xl text-indigo-600 mr-2"></i>
+                                <span class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                                    LearnGen.ai
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-300">
+                        <i class="fas fa-graduation-cap mr-2"></i> Revolutionizing education with AI-powered tools.
+                    </p>
+                    <div class="mt-4 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-link mr-2"></i> Quick Links
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="Features.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Features</a></li>
+                        <li><a href="Pricing.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Pricing</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i> Other Links
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="faq.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> FAQs</a></li>
+                        <li><a href="Careers.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Careers</a></li>
+                        <li><a href="About Us.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> About Us</a></li>
+                        <li><a href="Privacy Policy.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> Contact Us
+                    </h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> support@learngenie.ai
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i> +1 234 567 890
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> 123 Learning St, EduCity
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2023 LearnGen.ai. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="terms.html" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="Privacy Policy.html" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ accordion functionality
+        document.querySelectorAll('.group button').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.closest('.group');
+                faqItem.classList.toggle('active');
+                
+                // Close other open FAQs in the same category
+                const category = button.closest('[class^="border-b"]') || button.closest('div:not([class])');
+                category.querySelectorAll('.group').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+        
+        // Search functionality
+        const searchInput = document.querySelector('input[placeholder="Search FAQs..."]');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            if (searchTerm.length > 2) {
+                document.querySelectorAll('.group').forEach(item => {
+                    const question = item.querySelector('button span').textContent.toLowerCase();
+                    const answer = item.querySelector('div p').textContent.toLowerCase();
+                    if (question.includes(searchTerm) {
+                        item.classList.add('active');
+                        item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                });
+            }
+        });
+    </script>
+    <script src="/Js/main.js"></script>
+</body>
+</html>

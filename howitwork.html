@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnGen.ai - How It Works</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .bg-light {
+            background-color: #f9fafb;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+        }
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+        .tech-item:hover .tech-icon {
+            transform: scale(1.1);
+            background-color: #4f46e5;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <i class="fas fa-brain text-2xl text-indigo-600 mr-2"></i>
+                        <span class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                            LearnGen.ai
+                        </span>
+                    </a>
+                </div>
+    
+                <ul class="hidden md:flex space-x-6">
+                    <li>
+                        <a href="index.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-home mr-2"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Features.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-star mr-2"></i> Features
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Pricing.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-tag mr-2"></i> Pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+                            <i class="fas fa-sign-in-alt mr-2"></i> Login
+                        </a>
+                    </li>
+                </ul>
+    
+                <div class="md:hidden">
+                    <button id="mobileMenuButton" class="text-gray-700 hover:text-indigo-600 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg pb-2">
+            <a href="index.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-home mr-3 w-5 text-center"></i> Home
+            </a>
+            <a href="Features.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-star mr-3 w-5 text-center"></i> Features
+            </a>
+            <a href="Pricing.html" class="block text-gray-700 hover:text-indigo-600 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-tag mr-3 w-5 text-center"></i> Pricing
+            </a>
+            <a href="login.html" class="block text-indigo-600 hover:text-indigo-700 px-4 py-3 rounded-md text-base font-medium flex items-center">
+                <i class="fas fa-sign-in-alt mr-3 w-5 text-center"></i> Login
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl mb-6">
+                    <span class="block">How LearnGen.ai</span>
+                    <span class="block">Works</span>
+                </h1>
+                <p class="text-xl text-indigo-100 max-w-3xl mx-auto">
+                    <i class="fas fa-cogs mr-2"></i> Discover how our AI-powered platform adapts to your learning style and accelerates your knowledge acquisition.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    <span class="block">Simple Steps to</span>
+                    <span class="block text-indigo-600">Smarter Learning</span>
+                </h2>
+                <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500">
+                    <i class="fas fa-lightbulb text-yellow-400 mr-2"></i> LearnGen.ai revolutionizes education with just three easy steps
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Step 1 -->
+                <div class="step-card bg-indigo-50 p-8 rounded-xl transition duration-300">
+                    <div class="flex items-center justify-center h-20 w-20 rounded-full bg-indigo-600 text-white text-3xl font-bold mb-6 mx-auto">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-900 mb-3">Set Your Learning Goals</h3>
+                    <p class="text-gray-600 text-center">
+                        Tell us what you want to learn and your current knowledge level. Our AI analyzes your input to create a personalized learning path.
+                    </p>
+                    <div class="mt-6 bg-indigo-100 p-4 rounded-lg">
+                        <p class="text-indigo-700 text-sm font-medium flex items-center justify-center">
+                            <i class="fas fa-lightbulb mr-2"></i> Tip: Be specific about your goals for better recommendations
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="step-card bg-indigo-50 p-8 rounded-xl transition duration-300">
+                    <div class="flex items-center justify-center h-20 w-20 rounded-full bg-indigo-600 text-white text-3xl font-bold mb-6 mx-auto">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-900 mb-3">Engage with AI Tutor</h3>
+                    <p class="text-gray-600 text-center">
+                        Interact with our AI tutor through conversations, quizzes, and interactive exercises that adapt to your learning pace.
+                    </p>
+                    <div class="mt-6 bg-indigo-100 p-4 rounded-lg">
+                        <p class="text-indigo-700 text-sm font-medium flex items-center justify-center">
+                            <i class="fas fa-lightbulb mr-2"></i> Tip: The more you interact, the better the AI understands your needs
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="step-card bg-indigo-50 p-8 rounded-xl transition duration-300">
+                    <div class="flex items-center justify-center h-20 w-20 rounded-full bg-indigo-600 text-white text-3xl font-bold mb-6 mx-auto">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-900 mb-3">Track & Optimize</h3>
+                    <p class="text-gray-600 text-center">
+                        Monitor your progress with detailed analytics and receive automatic adjustments to your learning path based on performance.
+                    </p>
+                    <div class="mt-6 bg-indigo-100 p-4 rounded-lg">
+                        <p class="text-indigo-700 text-sm font-medium flex items-center justify-center">
+                            <i class="fas fa-lightbulb mr-2"></i> Tip: Review your analytics weekly to stay on track
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="GenAI.html" class="inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 transition shadow-lg hover:shadow-xl">
+                    <i class="fas fa-rocket mr-3"></i> Start Your Learning Journey Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="mb-10 lg:mb-0">
+                    <img class="w-full rounded-xl shadow-xl border-4 border-white" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="AI Technology">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-6">
+                        <span class="block">Advanced</span>
+                        <span class="block text-indigo-600">AI Learning Technology</span>
+                    </h2>
+                    <p class="text-xl text-gray-500 mb-8">
+                        LearnGen.ai combines multiple cutting-edge technologies to deliver a personalized learning experience:
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="tech-item flex items-start bg-white p-5 rounded-xl border border-gray-200 hover:border-indigo-300 transition-colors">
+                            <div class="tech-icon flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600">
+                                <i class="fas fa-robot text-xl"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h4 class="font-semibold text-gray-900 text-lg mb-2">Adaptive Learning Algorithms</h4>
+                                <p class="text-gray-600">Our system continuously adjusts content difficulty based on your performance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-item flex items-start bg-white p-5 rounded-xl border border-gray-200 hover:border-indigo-300 transition-colors">
+                            <div class="tech-icon flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600">
+                                <i class="fas fa-chart-line text-xl"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h4 class="font-semibold text-gray-900 text-lg mb-2">Performance Analytics</h4>
+                                <p class="text-gray-600">Detailed insights help you understand your strengths and areas for improvement.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-item flex items-start bg-white p-5 rounded-xl border border-gray-200 hover:border-indigo-300 transition-colors">
+                            <div class="tech-icon flex-shrink-0 bg-indigo-100 p-3 rounded-lg text-indigo-600">
+                                <i class="fas fa-comments text-xl"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h4 class="font-semibold text-gray-900 text-lg mb-2">Natural Language Processing</h4>
+                                <p class="text-gray-600">Have natural conversations with our AI tutor just like with a human teacher.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="Features.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition shadow hover:shadow-md">
+                            Explore All Features <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl mb-6">
+                Ready to Transform Your Learning?
+            </h2>
+            <p class="max-w-3xl mx-auto text-xl text-indigo-100 mb-8">
+                <i class="fas fa-bolt mr-2"></i> Join thousands of learners who are achieving their goals faster with LearnGen AI
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="signup.html" class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 md:py-4 md:text-lg md:px-10 transition flex items-center justify-center">
+                    <i class="fas fa-user-plus mr-2"></i> Start Free Trial
+                </a>
+                <a href="howitwork.html" class="px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-indigo-700 hover:bg-indigo-800 md:py-4 md:text-lg md:px-10 transition flex items-center justify-center">
+                    <i class="fas fa-play-circle mr-2"></i> How It Works
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <div class="flex items-center">
+                            <a href="index.html" class="flex items-center">
+                                <i class="fas fa-brain text-2xl text-indigo-600 mr-2"></i>
+                                <span class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                                    LearnGen.ai
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-300">
+                        <i class="fas fa-graduation-cap mr-2"></i> Revolutionizing education with AI-powered tools.
+                    </p>
+                    <div class="mt-4 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-link mr-2"></i> Quick Links
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="Features.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Features</a></li>
+                        <li><a href="Pricing.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Pricing</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i> Other Links
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="faq.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> FAQs</a></li>
+                        <li><a href="Careers.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Careers</a></li>
+                        <li><a href="About Us.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> About Us</a></li>
+                        <li><a href="Privacy Policy.html" class="text-gray-300 hover:text-white flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> Contact Us
+                    </h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> support@learngenie.ai
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i> +1 234 567 890
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> 123 Learning St, EduCity
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2023 LearnGen.ai. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="terms.html" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="Privacy Policy.html" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/Js/main.js"></script>
+</body>
+</html>
